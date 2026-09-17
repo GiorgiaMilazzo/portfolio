@@ -103,7 +103,7 @@ select {
 .hero-copy h1 {
   margin: 0;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(7rem, 16vw, 24rem);
+  font-size: clamp(6.2rem, 14vw, 20rem);
   line-height: 0.72;
   letter-spacing: -0.09em;
   font-weight: 500;
@@ -444,7 +444,7 @@ select {
   }
 
   .hero-copy h1 {
-    font-size: 5.3rem;
+    font-size: 4.8rem;
   }
 
   .hero-copy p {
