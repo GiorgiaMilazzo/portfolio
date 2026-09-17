@@ -14,7 +14,7 @@ function App() {
           <li>Based in Assisi, Perugia, Italy</li>
           <li>Driving license (B), no car</li>
           <li>First language Italian</li>
-          <li>First language English</li>
+          <li>Second language English</li>
         </ul>
       </section>
 
