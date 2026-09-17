@@ -267,6 +267,7 @@ select {
 .project-card.light {
   background: #f2eae0;
   color: var(--text);
+  border-color: rgba(195, 162, 121, 0.7);
 }
 
 .project-header {
@@ -278,6 +279,10 @@ select {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+.project-card.light .project-header {
+  border-bottom-color: rgba(195, 162, 121, 0.35);
+}
+
 .project-link {
   color: var(--gold);
   text-decoration: none;
@@ -285,6 +290,16 @@ select {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   opacity: 0.95;
+}
+
+.project-card.light .project-link,
+.project-card.light .project-type,
+.project-card.light .skill-list li {
+  color: var(--gold);
+}
+
+.project-card.light .skill-list li {
+  border-color: rgba(195, 162, 121, 0.7);
 }
 
 .project-copy {
@@ -444,31 +459,11 @@ select {
   }
 
   .hero-copy h1 {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    font-size: clamp(2.6rem, 12vw, 4.2rem);
-    white-space: nowrap;
-    letter-spacing: -0.06em;
-    overflow: visible;
-  }
-
-  .hero-line {
-    flex-wrap: wrap;
-  }
-
-  .hero-text {
-    font-size: clamp(2rem, 7vw, 3rem);
-    white-space: nowrap;
-  }
-
-  .name-block {
-    font-size: clamp(2.1rem, 7vw, 3.2rem);
+    font-size: 5.3rem;
   }
 
   .hero-copy p {
     max-width: 100%;
-    font-size: 0.9rem;
   }
 
   .hero-visual {
