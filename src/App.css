@@ -103,7 +103,7 @@ select {
 .hero-copy h1 {
   margin: 0;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(6.2rem, 14vw, 20rem);
+  font-size: clamp(72rem, 16vw, 24rem);
   line-height: 0.72;
   letter-spacing: -0.09em;
   font-weight: 500;
@@ -445,10 +445,26 @@ select {
 
   .hero-copy h1 {
     font-size: 4.8rem;
+    white-space: nowrap;
+    letter-spacing: -0.06em;
+  }
+
+  .hero-line {
+    flex-wrap: wrap;
+  }
+
+  .hero-text {
+    font-size: clamp(2rem, 7vw, 3rem);
+    white-space: nowrap;
+  }
+
+  .name-block {
+    font-size: clamp(2.1rem, 7vw, 3.2rem);
   }
 
   .hero-copy p {
     max-width: 100%;
+    font-size: 0.9rem;
   }
 
   .hero-visual {
