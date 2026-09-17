@@ -444,9 +444,13 @@ select {
   }
 
   .hero-copy h1 {
-    font-size: 4.8rem;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(2.6rem, 12vw, 4.2rem);
     white-space: nowrap;
     letter-spacing: -0.06em;
+    overflow: visible;
   }
 
   .hero-line {
