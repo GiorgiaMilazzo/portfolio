@@ -11,6 +11,7 @@ function Hero() {
 
       <div className="hero-buttons">
         <a className="button" href="#projects">See my projects</a>
+        <a className="button button-outline" href="./CV-Milazzo-Giorgia.pdf" download>Download CV</a>
         <a className="button button-outline" href="#contact">Contact me</a>
       </div>
     </header>

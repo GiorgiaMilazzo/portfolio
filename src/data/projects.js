@@ -41,7 +41,7 @@ export const projects = [
     ],
     repo: 'https://github.com/GiorgiaMilazzo/ClinicBooking.Api',
   },
-  {
+  /*{
     name: 'Video Game',
     type: '2D Flappy Game',
     status: 'In development',
@@ -50,7 +50,7 @@ export const projects = [
       'A video game currently in development, built with Godot and C#. This project is my way of exploring a new and fun field of programming.',
     skills: ['Godot', 'C#'],
     repo: '', // TODO: inserisci qui il link del repository del gioco
-  },
+  },*/
   {
     name: 'Portfolio',
     type: 'Personal Portfolio',
@@ -71,5 +71,5 @@ export const skillGroups = [
     items: ['ASP.NET Core Web API', 'Entity Framework Core', 'JWT authentication', 'CORS'],
   },
   { title: 'Databases', items: ['SQLite', 'PostgreSQL'] },
-  { title: 'Tools', items: ['Git & GitHub', 'Docker', 'Swagger', 'Godot'] },
+  { title: 'Tools', items: ['Git & GitHub', 'Swagger'] },
 ]
