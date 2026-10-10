@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* ---------- Colori ---------- */
 :root {
-  --bg: #f4ece0;
+  --bg: #f4eee6;
+  --card: #f7f1e8;
+  --border: #d8c3a5;
   --text: #171310;
-  --muted: rgba(23, 19, 16, 0.76);
-  --gold: #b99167;
+  --muted: #55504c;
+  --primary: #7a5c33;
+  --accent: #7a5c33;
 }
 
+/* ---------- Base ---------- */
 * {
   box-sizing: border-box;
 }
@@ -17,46 +22,331 @@ html {
 
 body {
   margin: 0;
-  background: #000;
-  color: var(--text);
-  font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-#root {
-  min-height: 100vh;
   background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-p,
-ul,
-li,
-span,
-button {
+h1, h2, h3, p, ul {
   margin: 0;
+}
+
+ul {
   padding: 0;
+  list-style: none;
 }
 
-button {
-  appearance: none;
+a {
+  color: var(--primary);
+  text-decoration: none;
 }
 
-::selection {
-  background: rgba(185, 145, 103, 0.2);
+a:hover {
+  text-decoration: underline;
+}
+
+/* contenitore centrato */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.navbar-logo {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.navbar-links a:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.1rem;
+}
+
+.hero h1 {
+  margin-top: 8px;
+  font-size: 4.5rem;
+  line-height: 1.1;
+}
+
+.role {
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.intro {
+  max-width: 700px;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* ---------- Bottoni ---------- */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: var(--bg);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.button:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--primary);
+}
+
+/* ---------- Sezioni ---------- */
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  scroll-margin-top: 50px;
+}
+
+.section-title {
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+}
+
+/* ---------- Card (usata ovunque) ---------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+}
+
+/* ---------- Progetti ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.projects-grid .card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.status {
+  padding: 2px 10px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.project-type {
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-summary {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.project-description {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.card-link {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* ---------- Tag (tecnologie e competenze) ---------- */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-list li {
+  padding: 4px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+/* ---------- Skills ---------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.skills-grid .card h3 {
+  margin-bottom: 12px;
+}
+
+/* ---------- Info ---------- */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ---------- Contatti ---------- */
+.footer {
+  margin-top: 40px;
+  padding: 60px 0;
+  background: var(--primary);
+  color: #ffffff;
+  scroll-margin-top: 50px;
+}
+
+.footer .section-title {
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-card {
+  display: block;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  color: var(--text);
+  text-align: center;
+  word-break: break-word;
+}
+
+.contact-card:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.contact-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  .navbar-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .role {
+    font-size: 1.2rem;
+  }
+
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }

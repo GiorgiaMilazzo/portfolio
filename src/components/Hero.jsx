@@ -1,31 +1,17 @@
-import heroImage from '../assets/hero.png'
-
 function Hero() {
   return (
-    <header className="hero panel-cream">
-      <div className="topbar">
-        
-      </div>
+    <header className="hero container" id="home">
+      <p className="eyebrow">Portfolio</p>
+      <h1>Giorgia Milazzo</h1>
+      <p className="role">Junior Developer</p>
 
-      <div className="hero-content">
-        <div className="hero-copy">
-          <h1>PORTFOLIO</h1>
+      <p className="intro">
+        I'm a junior developer with a passion for back-end development, cloud computing, and networking. At the same time, I love exploring new areas, and I'm also learning front-end development because I enjoy challenging myself and trying new things.
+      </p>
 
-          <div className="hero-line">
-            <div className="label-block">
-              <span className="hero-text"> Junior<br />Developer</span>
-            </div>
-          </div>
-
-          <p>
-            I'm a junior developer with a passion for back-end development, cloud computing, and networking. At the same time, I love exploring new areas, and I'm also learning front-end development because I enjoy challenging myself and trying new things.
-          </p>
-
-          <div className="name-block">
-            <span>GIORGIA</span>
-            <span>MILAZZO</span>
-          </div>
-        </div>
+      <div className="hero-buttons">
+        <a className="button" href="#projects">See my projects</a>
+        <a className="button button-outline" href="#contact">Contact me</a>
       </div>
     </header>
   )

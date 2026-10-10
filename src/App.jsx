@@ -1,25 +1,20 @@
+import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import Projects from './components/Projects.jsx'
+import Skills from './components/Skills.jsx'
+import Info from './components/Info.jsx'
 import Contacts from './components/Contacts.jsx'
 
 function App() {
   return (
-    <div className="portfolio-page">
+    <>
+      <Navbar />
       <Hero />
       <Projects />
-
-      <section className="info-strip panel-cream">
-        <div className="mini-title">Info</div>
-        <ul>
-          <li>Based in Assisi, Perugia, Italy</li>
-          <li>Driving license (B), no car</li>
-          <li>First language Italian</li>
-          <li>Second language English</li>
-        </ul>
-      </section>
-
+      <Skills />
+      <Info />
       <Contacts />
-    </div>
+    </>
   )
 }
 
