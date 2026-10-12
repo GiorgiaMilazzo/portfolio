@@ -10,7 +10,7 @@ function Info() {
         </div>
         <div className="card">
           <span className="info-label">Driving license</span>
-          <p className="info-value">B, no car</p>
+          <p className="info-value">B</p>
         </div>
         <div className="card">
           <span className="info-label">First language</span>
